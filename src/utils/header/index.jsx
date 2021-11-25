@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll} from 'react-scroll';
+import Button from '@mui/material/Button';
 import './index.css';
 import $ from 'jquery';
 
@@ -44,35 +45,56 @@ class Header extends React.Component{
                 </div>
                 <div id="cambio"></div>
                 <div className="sidebar-header">
+                    <div className="sidebar-partners">
+                        <div className="title-partners">
+                        Nuestros Patrocinadores
+                        </div>
+                        <div className="partners-container">
+                            <div className="partners-contained">
+                                <div className="logo-contained">
+                                <svg className="bluplee-logo" xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 1000.000000 1000.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M3731 8714 l-734 -1225 -61 -36 c-299 -179 -628 -446 -859 -698 -604 -657 -956 -1432 -1053 -2318 -35 -314 -20 -758 37 -1084 202 -1176 922 -2202 1963 -2798 482 -276 1031 -448 1611 -506 155 -16 575 -16 730 0 1108 111 2080 638 2771 1502 90 112 260 366 339 503 271 474 439 1002 501 1569 23 205 23 609 0 814 -95 872 -435 1631 -1023 2286 -236 263 -578 544 -889 730 l-61 36 -734 1225 -734 1225 -535 0 -535 0 -734 -1225z"/></g></svg>   
+                                </div>
+                                <div className="title-contained">
+                                    Blurplee
+                                </div>
+                                <a href="https://blurplee.herokuapp.com/" target="_blank" rel="noreferrer noopener" title="Blurplee"><span style={{visibility: 'hidden'}}>Link to Blurplee</span></a>
+                            </div> 
+                        </div>
+                    </div>
                     <ul>
                         <li>
                             <span className="sidebar-list-title blurplee">Blurplee</span>
-                            <ul>
-                                <li>adas</li>
+                            <ul className="branch-list">
+                                <li><Button variant="contained"><Link to="/examples/blurplee">Información</Link></Button></li>
+                                <li><Button variant="contained"><Link to="/examples/blurplee#xd">Información</Link></Button></li>
                             </ul>
                         </li>
                         <li>
                             <span className="sidebar-list-title aodesu">AoDesu</span>
-                            <ul>
-                                <li>adas</li>
+                            <ul className="branch-list">
+                                <li><Button variant="contained"><Link to="/examples/aodesu">Información</Link></Button></li>
+                                <li><Button variant="contained"><Link to="/examples/aodesu#xd">Información</Link></Button></li>
                             </ul>
                         </li>
                         <li>
                             <span className="sidebar-list-title aodownloader">AoDownloader</span>
-                            <ul>
-                                <li>adas</li>
+                            <ul className="branch-list">
+                                <li><Button variant="contained"><Link to="/examples/aodownloader">Información</Link></Button></li>
+                                <li><Button variant="contained"><Link to="/examples/aodownloader">Información</Link></Button></li>
                             </ul>
                         </li>
                         <li>
                             <span className="sidebar-list-title">Modaly</span>
-                            <ul>
-                                <li>adas</li>
+                            <ul className="branch-list">
+                                <li><Button variant="contained"><Link to="/examples/modaly">Información</Link></Button></li>
+                                <li><Button variant="contained"><Link to="/examples/modaly#xd">Información</Link></Button></li>
                             </ul>
                         </li>
                         <li>
                             <span className="sidebar-list-title conqueror">Conqueror</span>
-                            <ul>
-                                <li>adas</li>
+                            <ul className="branch-list">
+                                <li><Button variant="contained"><Link to="/examples/conqueror">Información</Link></Button></li>
+                                <li><Button variant="contained"><Link to="/examples/conqueror#xd">Información</Link></Button></li>
                             </ul>
                         </li>
                     </ul>

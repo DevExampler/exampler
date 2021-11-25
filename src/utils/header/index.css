@@ -69,10 +69,73 @@
     background: #000000;
     width: 200px;
     position: fixed;
-    left: -200px;
+    left: -220px;
     top: 71px;
     height: calc(100vh - 71px);
     transition: var(--transition-global);
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+.sidebar-partners{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    flex-flow: column nowrap;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.sidebar-partners::before{
+    content: "";
+    width: 185px;
+    height: 1px;
+    background: #444;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+}
+.title-partners{
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--font-exampler);
+}
+.partners-contained{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    padding: 20px 0;
+}
+.partners-contained:hover{
+    background: #090909;
+}
+.partners-contained a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.partners-contained .logo-contained{
+    width: 100px;
+    height: 100px;
+}
+.partners-contained .title-contained{
+    position: absolute;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-blurplee);
+    font-weight: 600;
+    font-size: 32px;
+    text-shadow: 0 0 10px rgba(0,0,0,.3);
+    color: #7984ff;
+    height: 100px;
+}
+.partners-contained .logo-contained g{
+    fill: var(--bluplee-color);
 }
 .header-top.active .blurplee-header,
 .header-top.active .by-logo{
@@ -130,4 +193,27 @@ div#cambio {
 }
 .sidebar-list-title.conqueror{
     color: #ffb039;
+}
+.branch-list{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.branch-list a{
+    display: flex;
+    padding: 6px 16px;
+}
+.branch-list Button{
+    width: calc(100% - 8px) !important;
+    padding: 0px !important;
+    justify-content: flex-start !important;
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+    font-family: var(--font-blurplee) !important;
+}
+.branch-list li:nth-child(1) Button{
+    text-transform: uppercase !important;
 }

@@ -8,7 +8,7 @@ class Examples extends Component {
     render() {
         return (
             <div className="content content-example">
-              Jeisson Gay Exampler
+              View Exampler
             </div>
         )
     }
