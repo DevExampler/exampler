@@ -1,0 +1,133 @@
+.header-top{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    background: #000000;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    transition: var(--transition-global);
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.header-logo{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 10px;
+}
+.exampler-logo{
+    font-family: var(--font-exampler);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    position: relative;
+}
+.by-logo{
+    position: absolute;
+    font-size: 16px;
+    right: 0;
+    bottom: 6px;
+    transition: var(--transition-global);
+}
+.blurplee-header{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    margin-left: 5px;
+    font-family: var(--font-blurplee);
+    font-weight: 400;
+    height: calc(100% - 4px);
+    transition: var(--transition-global);
+}
+.blurplee-logo{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 20px;
+    height: 20px;
+}
+.blurplee-logo svg g{
+    fill: var(--bluplee-color);
+}
+.header-nav-links{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
+    align-items: center;
+    margin-right: 50px;
+    flex: 1;
+    justify-content: center;
+}
+.header-nav-links a{
+    color: #ddd;
+}
+.header-nav-links a:hover{
+    color: #fff;
+}
+.sidebar-header{
+    background: #000000;
+    width: 200px;
+    position: fixed;
+    left: -200px;
+    top: 71px;
+    height: calc(100vh - 71px);
+    transition: var(--transition-global);
+}
+.header-top.active .blurplee-header,
+.header-top.active .by-logo{
+    opacity: 0;
+    visibility: hidden;
+}
+.header-top.active{
+    height: 50px;
+}
+div#cambio {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+.sidebar-header.active{
+    top: 51px;
+    height: calc(100vh - 51px);
+}
+.sidebar-list-title{
+    padding: 0 5px;
+    position: relative;
+    margin-left: 15px;
+    font-size: 20px;
+    font-family: var(--font-exampler);
+}
+
+.sidebar-list-title::after{
+    content: "";
+    width: 100%;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    background: #000000;
+}
+.sidebar-list-title::before{
+    content: "";
+    height: 2px;
+    width: 185px;
+    z-index: -2;
+    top: calc(50% + 1px);
+    left: -10px;
+    position: absolute;
+    background: currentColor;
+}
+.sidebar-list-title.blurplee{
+    color: #7984ff;
+}
+.sidebar-list-title.aodesu,
+.sidebar-list-title.aodownloader{
+    color: #00FFFF;
+}
+.sidebar-list-title.conqueror{
+    color: #ffb039;
+}

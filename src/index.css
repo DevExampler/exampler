@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: #111111;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  min-height: 200vh;
+}
+body.NoScroll{
+	overflow-y: hidden !important;
+}
+
+.content.showSettings{
+	transform: scale(.9);
+	transition: .2s;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+img
+{
+  width: 100%;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  	--ao-recommended-items-per-grow: 5;
+	--ao-recommended-movies-per-grow: 6;
+	--ao-grid-item-margin: 5px;
+	--ao-anime-img-multiplier: 1.6;
+	--ao-max-height-caps: 75vh;
+	--transition-global: .2s;
+
+	--branch: #00FFFF;
+	--dark-primary: #141d26;
+	--dark-secondary: #243447;
+	--dark-tertiary: #212F3D;
+	--dark-quaternary: #2C3E50;
+
+	--light-primary: #ECF0F1;
+	--light-secondary: #D0D3D4;
+
+  	--bluplee-color: #4d5bf9;
+
+
+	--font-primary: 'Barlow', sans-serif;
+	--font-secondary: 'Roboto', sans-serif;
+	--font-tertiary: 'Noto Sans JP', sans-serif;
+  --font-blurplee: 'Montserrat', sans-serif;
+  --font-exampler: 'Outfit', sans-serif;
+}
+/* ///////////////////////////// SCROLLBAR ///////////////////////////// */
+*::-webkit-scrollbar {
+	width: 8px;     /* Tamaño del scroll en vertical */
+	height: 0px;    /* Tamaño del scroll en horizontal */
+	/* display: none;  Ocultar scroll */
+  }
+  
+  /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+  *::-webkit-scrollbar-thumb {
+	background: var(--dark-quaternary);
+	border-radius: 4px;
+  }
+  *.light::-webkit-scrollbar-thumb,
+  body.light .caps-list::-webkit-scrollbar-thumb,
+  body.light .settings-content::-webkit-scrollbar-thumb{
+	  background: #bbbfc0;
+  }
+  /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+  *::-webkit-scrollbar-thumb:hover {
+	background: var(--dark-quaternary);
+  }
+  *.light::-webkit-scrollbar-thumb:hover,
+  body.light .caps-list::-webkit-scrollbar-thumb:hover,
+  body.light .settings-content::-webkit-scrollbar-thumb:hover{
+	  background: #bbbfc0;
+  }
+  /* Cambiamos el fondo cuando esté en active */
+  *::-webkit-scrollbar-thumb:active {
+	background-color: var(--dark-tertiary);
+  }
+  
+  /* Ponemos un color de fondo y redondeamos las esquinas del track */
+  *::-webkit-scrollbar-track {
+	background: var(--dark-primary);
+  }
+
+  *.light::-webkit-scrollbar-track,
+  body.light .caps-list::-webkit-scrollbar-track,
+  body.light .settings-content::-webkit-scrollbar-track{
+	  background: #ffffff;
+  }
+  
+  /* Cambiamos el fondo cuando esté en active o hover */
+  *::-webkit-scrollbar-track:hover,
+  *::-webkit-scrollbar-track:active {
+  background: var(--dark-primary);
+  }
+
+  *.light::-webkit-scrollbar-track:hover,
+  *.light::-webkit-scrollbar-track:active {
+	  background: #ffffff;
+  }
+/* PACE JS */
+.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.pace-inactive {
+	display: none;
+}
+
+.pace .pace-progress {
+	background: #ffffff;
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	right: 100%;
+	width: 100%;
+	height: 2px;
+}
+body.light .pace .pace-progress{
+	background: var(--dark-primary);
+}
+
+.pace .pace-progress-inner {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	height: 100%;
+	box-shadow: 0 0 10px #ffffff, 0 0 5px #ffffff;
+	opacity: 1.0;
+	-webkit-transform: rotate(3deg) translate(0px, -4px);
+	-moz-transform: rotate(3deg) translate(0px, -4px);
+	-ms-transform: rotate(3deg) translate(0px, -4px);
+	-o-transform: rotate(3deg) translate(0px, -4px);
+	transform: rotate(3deg) translate(0px, -4px);
+}
+
+.pace .pace-activity {
+	display: block;
+	position: fixed;
+	z-index: 2000;
+	top: 15px;
+	right: 15px;
+	width: 14px;
+	height: 14px;
+	border: solid 2px transparent;
+	border-top-color: #00ffff;
+	border-left-color: #00ffff;
+	border-radius: 10px;
+	-webkit-animation: pace-spinner 400ms linear infinite;
+	-moz-animation: pace-spinner 400ms linear infinite;
+	-ms-animation: pace-spinner 400ms linear infinite;
+	-o-animation: pace-spinner 400ms linear infinite;
+	animation: pace-spinner 400ms linear infinite;
+}
+@-webkit-keyframes pace-spinner {
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-moz-keyframes pace-spinner {
+	0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-o-keyframes pace-spinner {
+	0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@-ms-keyframes pace-spinner {
+	0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes pace-spinner {
+	0% { transform: rotate(0deg); transform: rotate(0deg); }
+	100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+Button{
+    background: transparent !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+}
+Button:hover
+{
+    background: rgba(255, 255, 255, .05) !important;
+    box-shadow: none !important;
+}
+.content
+{
+	margin-top: 71px;
+}
+.content-example ~ .sidebar-header{
+	left: 0;
+}
+.content-example{
+	margin-left: 200px;
+}
+.special-txt{
+	color: var(--branch) !important;
+}
